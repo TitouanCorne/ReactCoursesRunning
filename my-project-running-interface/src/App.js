@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Interface({courses}){
   return(
-    <div>
+    <div className='interface'>
       <MyRacesBox/>
       <RacesBox/>
     </div>
@@ -11,7 +11,7 @@ function Interface({courses}){
 
 function MyRacesBox(){
   return(
-    <div>      
+    <div className='myRacesBox'>      
       <h2> Mes courses à venir : </h2>
       <table>
         <tbody>
@@ -24,17 +24,19 @@ function MyRacesBox(){
 
 function MyRace(){
   return(
-    <tr>
-      <th>Marathon des Géants</th>
-      <th>Toulouse</th>
-      <th>10 novembre 2024</th>
+    <tr className='tab-myRace'>
+      <td className='tab-myRace-name'>Marathon des Géants</td>
+      <td className='tab-myRace-place'>Toulouse</td>
+      <td className='tab-myRace-date'>10 novembre 2024</td>
     </tr>
   )
 }
 
 function RacesBox(){
   return(
-    <div>
+    <div className='racesBox'>
+      <Race/>
+      <Race/>      
       <Race/>
     </div>
   )
@@ -42,12 +44,14 @@ function RacesBox(){
 
 function Race(){
   return(
-    <div className='race-container'>
+    <div className='race'>
       <img className='race-img'></img>
       <h1 className='race-name'>Marathon des Géants</h1>
       <h3 className='race-info'>Toulouse, 10 novembre 2024</h3>
-      <h3 className='race-price'>Prix : 50€</h3> 
-      <button className='race-selection'></button>
+      <div className='race-price-selection'>
+        <h3 className='race-price'>Prix : 50€</h3> 
+        <button className='race-selection'>X</button>
+      </div>
     </div>
   )
 }
