@@ -25,7 +25,6 @@ code {
 
 /* MyRace */
 .tab-myRace{
-  background-color: gray;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Divise en trois colonnes égales */
   width: 100%;
@@ -52,6 +51,13 @@ code {
   margin-left: 2.5%;
   margin-right: 2.5%;
   width: 30%;
+}
+
+.race-img{
+  display: block;
+  margin: 0 auto; /* Centre l'image horizontalement */
+  max-width: 100%; /* Adapte l'image à la largeur du conteneur sans le dépasser */
+  height: auto; /* Maintient les proportions de l'image */
 }
 
 .race-name{

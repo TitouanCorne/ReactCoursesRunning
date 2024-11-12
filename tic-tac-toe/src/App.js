@@ -15,7 +15,7 @@ export default function Board() {
     if (squares[i]|| calculateWinner(squares)) { //S'il y a déjà un X ou un O ou s'il y a un gagnant
       return;
     }
-    const nextSquares = squares.slice(); //on copue le tableau
+    const nextSquares = squares.slice(); //on copie le tableau
     if(xIsNext){
       nextSquares[i] = "X";
     }
